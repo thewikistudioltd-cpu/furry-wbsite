@@ -1,0 +1,223 @@
+{
+  "_note": "Artwork registry. Every image on the site is referenced from here so the alt text and the artist credit stay consistent. 'credit' must name the human artist who drew the piece. Source files came from the fury-arts drive folder supplied by the Refpaw owner; confirm the credit line and the permission to display each piece before launch.",
+
+  "refsheet-coyote": {
+    "file": "refsheet-coyote.webp",
+    "title": "Coyote ref sheet",
+    "alt": "Reference sheet of a tan coyote character: four full-body views, a clothed version, head expressions and a colour palette",
+    "credit": "LunaFlare",
+    "cat": "sheets",
+    "fit": "contain",
+    "tint": "tint-sun"
+  },
+  "refsheet-grey-wolf": {
+    "file": "refsheet-grey-wolf.webp",
+    "title": "Grey wolf ref sheet",
+    "alt": "Reference sheet of a grey wolf character: front and back view, chibi poses, tail and paw details and a colour palette",
+    "credit": "LunaFlare",
+    "cat": "sheets",
+    "fit": "contain",
+    "tint": "tint-mint"
+  },
+  "refsheet-orca-canine": {
+    "file": "refsheet-orca-canine.webp",
+    "title": "Orca-marked canine ref sheet",
+    "alt": "Reference sheet of a black, white and blue canine character with orca markings, showing four views and a colour palette",
+    "credit": "LunaFlare",
+    "cat": "sheets",
+    "fit": "contain",
+    "tint": "tint-blue"
+  },
+  "refsheet-saarema": {
+    "file": "refsheet-saarema.webp",
+    "title": "Saarema ref sheet",
+    "alt": "Reference sheet for a white and grey character named Saarema, with front and back views, hand details and a colour palette on a magenta background",
+    "credit": "LunaFlare",
+    "cat": "sheets",
+    "fit": "contain",
+    "tint": "tint-pink"
+  },
+  "refsheet-fox-winter": {
+    "file": "refsheet-fox-winter.webp",
+    "title": "Winter fox ref sheet",
+    "alt": "Reference sheet of a cream and orange fox character, showing a clothed view, a fur view, eye and paw details and a colour ramp",
+    "credit": "LunaFlare",
+    "cat": "sheets",
+    "fit": "contain",
+    "tint": "tint-blue"
+  },
+  "refsheet-crimson-lizard": {
+    "file": "refsheet-crimson-lizard.webp",
+    "title": "Crimson lizard ref sheet",
+    "alt": "Reference sheet of a dark red scaled lizard character with three body views, three head expressions and a colour palette",
+    "credit": "LunaFlare",
+    "cat": "sheets",
+    "fit": "contain",
+    "tint": "tint-blue"
+  },
+  "refsheet-violet-hyena": {
+    "file": "refsheet-violet-hyena.webp",
+    "title": "Violet hyena ref sheet",
+    "alt": "Reference sheet of a purple and black hyena character on a transparent background, with front, back and head views",
+    "credit": "LunaFlare",
+    "cat": "sheets",
+    "fit": "contain",
+    "tint": "tint-pink"
+  },
+  "refsheet-monochrome-wolf": {
+    "file": "refsheet-monochrome-wolf.webp",
+    "title": "Monochrome wolf ref sheet",
+    "alt": "Reference sheet of a black and white wolf character with full body views, a headshot, paw details and written character notes",
+    "credit": "LunaFlare",
+    "cat": "sheets",
+    "fit": "contain",
+    "tint": "tint-blue"
+  },
+
+  "sticker-coyote-grin": {
+    "file": "sticker-coyote-grin.png",
+    "title": "Grin",
+    "alt": "Sticker of a tan coyote character grinning widely",
+    "credit": "LunaFlare",
+    "cat": "icons",
+    "fit": "contain",
+    "tint": "tint-sun"
+  },
+  "sticker-coyote-laugh": {
+    "file": "sticker-coyote-laugh.png",
+    "title": "Laughing",
+    "alt": "Sticker of a tan coyote character laughing with eyes half closed",
+    "credit": "LunaFlare",
+    "cat": "icons",
+    "fit": "contain",
+    "tint": "tint-mint"
+  },
+  "sticker-coyote-wink": {
+    "file": "sticker-coyote-wink.png",
+    "title": "Tongue out",
+    "alt": "Sticker of a tan coyote character winking with its tongue out",
+    "credit": "LunaFlare",
+    "cat": "icons",
+    "fit": "contain",
+    "tint": "tint-pink"
+  },
+  "sticker-coyote-angry": {
+    "file": "sticker-coyote-angry.png",
+    "title": "Angry",
+    "alt": "Sticker of a tan coyote character snarling with bared teeth",
+    "credit": "LunaFlare",
+    "cat": "icons",
+    "fit": "contain",
+    "tint": "tint-blue"
+  },
+
+  "icon-bust-coyote": {
+    "file": "icon-bust-coyote.webp",
+    "title": "Coyote bust",
+    "alt": "Bust portrait of a grey and brown coyote character with green eyes, smiling",
+    "credit": "LunaFlare",
+    "cat": "icons",
+    "fit": "cover",
+    "tint": "tint-sun"
+  },
+  "icon-halloween-cat": {
+    "file": "icon-halloween-cat.webp",
+    "title": "Halloween feline bust",
+    "alt": "Bust portrait of an orange feline character wearing a witch hat, with a pumpkin collar and an orange night sky behind",
+    "credit": "LunaFlare",
+    "cat": "icons",
+    "fit": "cover",
+    "tint": "tint-sun"
+  },
+
+  "art-samurai-fox": {
+    "file": "art-samurai-fox.webp",
+    "title": "Samurai fox",
+    "alt": "Full body illustration of a dark grey fox character in black and red samurai clothing holding a katana",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-pink"
+  },
+  "art-magazine-cover": {
+    "file": "art-magazine-cover.webp",
+    "title": "Fursona magazine cover",
+    "alt": "Mock magazine cover illustration featuring a wolf character posing with a rifle, headline text around them",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-pink"
+  },
+  "art-moon-badger": {
+    "file": "art-moon-badger.webp",
+    "title": "Moonlit badger",
+    "alt": "Illustration of a black and white badger character in camo trousers standing with arms crossed against a purple moon",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-blue"
+  },
+  "scene-beach-jeep": {
+    "file": "scene-beach-jeep.webp",
+    "title": "Beach day",
+    "alt": "Illustration of two characters leaning on a red jeep on a beach with palm trees and rock formations",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-blue"
+  },
+  "scene-waterfall": {
+    "file": "scene-waterfall.webp",
+    "title": "Waterfall overlook",
+    "alt": "Illustration of a white wolf character standing on a cliff edge above turquoise waterfalls at dusk",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-blue"
+  },
+  "scene-portal-wolf": {
+    "file": "scene-portal-wolf.webp",
+    "title": "Portal",
+    "alt": "Illustration of a black and white wolf character standing in front of a glowing golden ring with floating rocks around",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-sun"
+  },
+  "scene-forest-wolves": {
+    "file": "scene-forest-wolves.webp",
+    "title": "Two wolves",
+    "alt": "Illustration of two grey wolf characters waving, standing in a meadow in front of pine trees",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-mint"
+  },
+  "scene-moonlight-pair": {
+    "file": "scene-moonlight-pair.webp",
+    "title": "Moonlight",
+    "alt": "Illustration of two wolf characters sitting on a rock, one pointing at a large blue moon",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-blue"
+  },
+  "scene-forest-walk": {
+    "file": "scene-forest-walk.webp",
+    "title": "Forest walk",
+    "alt": "Illustration of a grey canine character walking through a sunlit forest clearing with butterflies and daisies",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-mint"
+  },
+  "scene-beach-tiger": {
+    "file": "scene-beach-tiger.webp",
+    "title": "Shoreline",
+    "alt": "Illustration of a striped feline character sitting on a beach beside two bottles, with cliffs behind",
+    "credit": "LunaFlare",
+    "cat": "illustration",
+    "fit": "cover",
+    "tint": "tint-sun"
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="154" viewBox="0 0 650 154" aria-label="refpaw logo"><g transform="translate(8,14)"><g>
+<ellipse cx="23" cy="52" rx="11.5" ry="15" transform="rotate(-20 23 52)" fill="#4AA3DF" stroke="#1B1F3B" stroke-width="4"/>
+<ellipse cx="50" cy="26" rx="12.5" ry="15" transform="rotate(-10 50 26)" fill="#FF7AA8" stroke="#1B1F3B" stroke-width="4"/>
+<ellipse cx="83" cy="25" rx="12.5" ry="15" transform="rotate(10 83 25)" fill="#FFC83D" stroke="#1B1F3B" stroke-width="4"/>
+<ellipse cx="110" cy="53" rx="11.5" ry="15" transform="rotate(20 110 53)" fill="#3ECFA3" stroke="#1B1F3B" stroke-width="4"/>
+<path d="M65.9 48.2 C46.2 48.2 38.9 60.8 30.1 72.6 C20.2 85.8 22.2 103.8 36 109.5 C45.8 113.5 53.8 107.2 66.5 107.2 C79.3 107.2 86.5 114 97.1 109.1 C111.9 102.6 109.1 86.2 101.6 73.8 C93.6 61 85.2 48.2 65.9 48.2 Z" fill="#1B1F3B" />
+</g></g><text x="157" y="116" fill="#1B1F3B" font-size="111" letter-spacing="-5" font-family="Fredoka, Comfortaa, Nunito, Arial Rounded MT Bold, Arial, sans-serif" font-weight="700">refpaw</text></svg>
