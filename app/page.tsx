@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { ArtFigure, Plate } from "@/components/Art";
@@ -6,6 +7,11 @@ import { Reveal } from "@/components/Reveal";
 import { Tbc } from "@/components/Tbc";
 import { artSrc } from "@/lib/artwork";
 import { vars } from "@/lib/site";
+
+/** Title and description come from the layout; only the canonical is per-page. */
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const products = [
   {

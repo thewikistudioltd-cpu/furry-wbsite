@@ -2,7 +2,7 @@
   "_note": "Every value the launch checklist still has to confirm lives here, so you change it once and the whole site updates. Values wrapped in [square brackets] are still unconfirmed placeholders and render with a dotted underline on the site.",
   "name": "Refpaw",
   "tagline": "A collective of human artists drawing fursona art. SFW only. No AI.",
-  "url": "https://refpaw.com",
+  "url": "https://refpaw-seven.vercel.app",
   "locale": "en-US",
   "contact": {
     "email": "[hello@refpaw.com]",
