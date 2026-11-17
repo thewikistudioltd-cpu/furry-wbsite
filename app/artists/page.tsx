@@ -4,15 +4,16 @@ import Link from "next/link";
 import { Plate } from "@/components/Art";
 import { Crumbs } from "@/components/blocks";
 import { Tbc } from "@/components/Tbc";
-import { artSrc } from "@/lib/artwork";
+import { art, artSrc } from "@/lib/artwork";
+import { pageMetadata } from "@/lib/metadata";
 import { contact, site, vars } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Meet the Artists",
+export const metadata: Metadata = pageMetadata({
+  title: "Furry Artists for Hire: Meet the Collective",
   description:
     "Refpaw is a collective of human artists. See each artist's style, past work and open slots, then pick who draws your character.",
-  alternates: { canonical: "/artists" },
-};
+  path: "/artists",
+});
 
 export default function ArtistsPage() {
   return (
@@ -40,7 +41,7 @@ export default function ArtistsPage() {
                   <img
                     className="artist-avatar"
                     src={artSrc(artist.avatar)}
-                    alt=""
+                    alt={art(artist.avatar).alt}
                     width={58}
                     height={58}
                     loading="lazy"
@@ -52,7 +53,7 @@ export default function ArtistsPage() {
                 </div>
                 <div className="artist-strip">
                   {artist.strip.map((key) => (
-                    <img src={artSrc(key)} alt="" loading="lazy" key={key} />
+                    <img src={artSrc(key)} alt={art(key).alt} loading="lazy" key={key} />
                   ))}
                 </div>
                 <div className="artist-foot">

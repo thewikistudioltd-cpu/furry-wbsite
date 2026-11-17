@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 
 import { Crumbs, CtaPanel, Note } from "@/components/blocks";
 import { contact } from "@/lib/site";
+import { pageMetadata } from "@/lib/metadata";
 
 import { GalleryFilter } from "./GalleryFilter";
 
-export const metadata: Metadata = {
-  title: "Work by Refpaw Artists: Ref Sheets, Icons, Illustrations",
+export const metadata: Metadata = pageMetadata({
+  title: "Furry Art Portfolio: Ref Sheets, Icons, Illustrations",
   description:
     "Hand-drawn fursona reference sheets, headshot icons and character illustrations by the artists of the Refpaw collective. Every piece credited.",
-  alternates: { canonical: "/work" },
-};
+  path: "/work",
+});
 
 /** Wide ref sheets take two columns so a row still lines up along the bottom. */
 const items = [

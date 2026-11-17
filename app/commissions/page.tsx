@@ -5,14 +5,15 @@ import { Plate } from "@/components/Art";
 import { Crumbs, CtaPanel, Step, TrustRow } from "@/components/blocks";
 import { Reveal } from "@/components/Reveal";
 import { Tbc } from "@/components/Tbc";
+import { pageMetadata } from "@/lib/metadata";
 import { vars } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "What We Draw: Ref Sheets, Icons & Sticker Packs",
+export const metadata: Metadata = pageMetadata({
+  title: "Furry Art Commissions: Ref Sheets, Icons, Stickers",
   description:
-    "Everything you can commission from Refpaw: fursona reference sheets, profile icons, Telegram sticker packs and the first fursona bundle. SFW only, no AI.",
-  alternates: { canonical: "/commissions" },
-};
+    "Furry art commissions from named artists: ref sheets, profile icons, Telegram sticker packs and a first fursona bundle. SFW only, no AI.",
+  path: "/commissions",
+});
 
 const products = [
   {
@@ -21,7 +22,7 @@ const products = [
     copy: "The sheet every artist and fursuit maker will ask you for. Front and back view, palette with hex codes, expressions and detail callouts.",
     price: vars.price_sheet_simple,
     href: "/furry-ref-sheet-commission",
-    cta: "Order",
+    cta: "Order a ref sheet",
   },
   {
     art: "icon-bust-coyote",
@@ -29,7 +30,7 @@ const products = [
     copy: "A headshot for Telegram, Discord, Bluesky and everywhere else. Flat or shaded, with square and round crops.",
     price: vars.price_icon_flat,
     href: "/furry-icon-commission",
-    cta: "Order",
+    cta: "Order an icon",
   },
   {
     art: "sticker-coyote-wink",
@@ -37,7 +38,7 @@ const products = [
     copy: "Your character’s moods, ready to send. Six stickers as 512px PNG files, and you choose the expressions.",
     price: vars.price_stickers_6,
     href: "/furry-telegram-sticker-commission",
-    cta: "Order",
+    cta: "Order a sticker pack",
   },
   {
     art: "refsheet-orca-canine",
@@ -45,7 +46,7 @@ const products = [
     copy: "New to all this? A ref sheet, an icon and six stickers from one artist, so your character looks the same everywhere.",
     price: vars.price_bundle,
     href: "/first-fursona-bundle",
-    cta: "See it",
+    cta: "See the bundle",
   },
 ];
 
@@ -57,7 +58,7 @@ export default function CommissionsPage() {
           <Crumbs trail={[{ label: "Home", href: "/" }, { label: "What we draw" }]} />
           <p className="eyebrow">What we draw</p>
           <h1 className="h-hero" style={{ fontSize: "clamp(2.3rem,4.4vw,3.4rem)" }}>
-            Three things, done properly
+            Furry art commissions from artists you can name
           </h1>
           <p className="lead">
             Every order includes a sketch for approval before color, and full-size files when

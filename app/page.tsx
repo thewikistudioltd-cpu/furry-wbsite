@@ -6,11 +6,28 @@ import { CtaPanel, Faq, Step, TrustRow } from "@/components/blocks";
 import { Reveal } from "@/components/Reveal";
 import { Tbc } from "@/components/Tbc";
 import { artSrc } from "@/lib/artwork";
-import { vars } from "@/lib/site";
+import { site, vars } from "@/lib/site";
 
-/** Title and description come from the layout; only the canonical is per-page. */
+const homeDescription =
+  "Hand-drawn fursona ref sheets, icons and sticker packs from artists you can name. SFW only. No AI. Approve the sketch before color starts.";
+
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    locale: site.locale.replace("-", "_"),
+    title: "Refpaw | Furry Ref Sheets, Icons & Stickers by Real Artists",
+    description: homeDescription,
+    url: "/",
+    images: ["/branding/social-cover-1200x630.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Refpaw | Furry Ref Sheets, Icons & Stickers by Real Artists",
+    description: homeDescription,
+    images: ["/branding/social-cover-1200x630.png"],
+  },
 };
 
 const products = [
@@ -20,7 +37,7 @@ const products = [
     copy: "The sheet every artist and fursuit maker will ask you for. Front and back view, palette with hex codes, two expressions and detail callouts.",
     price: vars.price_sheet_simple,
     href: "/furry-ref-sheet-commission",
-    cta: "Order",
+    cta: "Order a ref sheet",
   },
   {
     art: "icon-bust-coyote",
@@ -28,7 +45,7 @@ const products = [
     copy: "A headshot for Telegram, Discord, Bluesky and everywhere else. Flat or shaded, with square and round crops.",
     price: vars.price_icon_flat,
     href: "/furry-icon-commission",
-    cta: "Order",
+    cta: "Order an icon",
   },
   {
     art: "sticker-coyote-laugh",
@@ -36,7 +53,7 @@ const products = [
     copy: "Your character’s moods, ready to send. Six stickers as 512px PNG files, and you choose the expressions.",
     price: vars.price_stickers_6,
     href: "/furry-telegram-sticker-commission",
-    cta: "Order",
+    cta: "Order a sticker pack",
   },
   {
     art: "refsheet-orca-canine",
@@ -44,7 +61,7 @@ const products = [
     copy: "New to all this? Get a ref sheet, an icon and six stickers from one artist, so your character looks the same everywhere.",
     price: vars.price_bundle,
     href: "/first-fursona-bundle",
-    cta: "See it",
+    cta: "See the bundle",
   },
 ];
 
@@ -79,7 +96,7 @@ export default function HomePage() {
               <div className="hero-plate-main">
                 <img
                   src={artSrc("refsheet-coyote")}
-                  alt="Reference sheet of a tan coyote character: four full-body views, a clothed version, head expressions and a colour palette"
+                  alt="Reference sheet of a tan coyote character: four full-body views, a clothed version, head expressions and a color palette"
                   width={1400}
                   height={991}
                   fetchPriority="high"
@@ -90,7 +107,7 @@ export default function HomePage() {
               <div className="hero-plate-sub">
                 <img
                   src={artSrc("icon-bust-coyote")}
-                  alt="Bust portrait of a grey and brown coyote character with green eyes, smiling"
+                  alt="Bust portrait of a gray and brown coyote character with green eyes, smiling"
                   width={600}
                   height={600}
                   loading="lazy"
@@ -109,7 +126,7 @@ export default function HomePage() {
         <div className="wrap wrap-wide">
           <Reveal className="center" style={{ marginBottom: 48 }}>
             <p className="eyebrow eyebrow-blue">What we draw</p>
-            <h2 className="h-section">Three things, done properly</h2>
+            <h2 className="h-section">Four things, done properly</h2>
             <p className="lead measure">
               Every order includes a sketch for approval before color, and full-size files
               when it is finished.
@@ -206,9 +223,9 @@ export default function HomePage() {
         <div className="wrap">
           <Reveal className="artist-feature">
             <div className="artist-showcase">
-              <Plate art="scene-portal-wolf" ratio="3x4" credit={false} />
-              <Plate art="icon-halloween-cat" ratio="1x1" credit={false} />
-              <Plate art="art-samurai-fox" ratio="1x1" credit={false} />
+              <Plate art="scene-portal-wolf" ratio="3x4" credit={false} decorative />
+              <Plate art="icon-halloween-cat" ratio="1x1" credit={false} decorative />
+              <Plate art="art-samurai-fox" ratio="1x1" credit={false} decorative />
             </div>
 
             <div>
@@ -216,18 +233,24 @@ export default function HomePage() {
               <h2 className="h-section">Choose the hand behind the work</h2>
 
               <div className="artist-meta">
-                <img src={artSrc("icon-bust-coyote")} alt="" width={62} height={62} loading="lazy" />
+                <img
+                  src={artSrc("icon-bust-coyote")}
+                  alt="LunaFlare artist avatar"
+                  width={62}
+                  height={62}
+                  loading="lazy"
+                />
                 <div>
                   <h3>LunaFlare</h3>
                   <p>
-                    Bold lineart, clean colour &middot;{" "}
+                    Bold lineart, clean color &middot;{" "}
                     <span className="accent-mint">Open for commissions</span>
                   </p>
                 </div>
               </div>
 
               <p>
-                Thick outlines, flat saturated colour, strong silhouettes. Ref sheets are the
+                Thick outlines, flat saturated color, strong silhouettes. Ref sheets are the
                 core of the work: every view, every marking and a palette your next artist can
                 actually use.
               </p>

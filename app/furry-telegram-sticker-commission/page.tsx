@@ -3,14 +3,18 @@ import Link from "next/link";
 
 import { Sticker } from "@/components/Art";
 import { Crumbs, CtaPanel, TrustRow } from "@/components/blocks";
+import { JsonLd } from "@/components/JsonLd";
 import { Tbc } from "@/components/Tbc";
+import { pageMetadata } from "@/lib/metadata";
 import { vars } from "@/lib/site";
+import { serviceJsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Furry Telegram Sticker Pack Commissions",
-  description: `Custom furry sticker packs for Telegram and Discord. Six stickers of your character, 512px PNG, you choose the expressions. From $${vars.price_stickers_6}.`,
-  alternates: { canonical: "/furry-telegram-sticker-commission" },
-};
+  description:
+    "Custom furry sticker packs for Telegram and Discord. Six hand-drawn stickers of your character as transparent 512px PNG files.",
+  path: "/furry-telegram-sticker-commission",
+});
 
 const expressions = [
   "Happy",
@@ -57,9 +61,17 @@ const packs = [
   },
 ];
 
+const structuredData = serviceJsonLd({
+  name: "Furry Telegram sticker pack commission",
+  description:
+    "A custom set of hand-drawn fursona stickers for Telegram and Discord, created by a named human artist.",
+  path: "/furry-telegram-sticker-commission/",
+});
+
 export default function StickerPage() {
   return (
     <>
+      <JsonLd data={structuredData} />
       <section className="pagehead atmosphere">
         <div className="wrap">
           <Crumbs

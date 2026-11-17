@@ -1,9 +1,12 @@
 import Link from "next/link";
 
-import { Tbc } from "@/components/Tbc";
 import { legal, site } from "@/lib/site";
 
 export function Footer() {
+  const hasLegalDetails = [legal.entity, legal.company_number, legal.address].every(
+    (value) => !value.includes("["),
+  );
+
   return (
     <footer className="site-footer">
       <div className="wrap wrap-wide">
@@ -40,11 +43,11 @@ export function Footer() {
             &copy; 2026 Refpaw. All artwork belongs to its artist and the character&rsquo;s
             owner.
           </span>
-          <span>
-            <Tbc>
+          {hasLegalDetails && (
+            <span>
               {`Refpaw is a trading name of ${legal.entity}, ${legal.company_number}, ${legal.address}.`}
-            </Tbc>
-          </span>
+            </span>
+          )}
         </div>
       </div>
     </footer>

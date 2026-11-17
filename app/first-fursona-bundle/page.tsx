@@ -3,14 +3,18 @@ import Link from "next/link";
 
 import { Plate } from "@/components/Art";
 import { Crumbs, CtaPanel, TrustRow } from "@/components/blocks";
+import { JsonLd } from "@/components/JsonLd";
 import { Tbc } from "@/components/Tbc";
+import { pageMetadata } from "@/lib/metadata";
 import { vars } from "@/lib/site";
+import { serviceJsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "First Fursona Bundle: Ref Sheet, Icon, Stickers",
-  description: `New to the fandom? Get a ref sheet, an icon and six stickers of your character from one artist, in one style. From $${vars.price_bundle}.`,
-  alternates: { canonical: "/first-fursona-bundle" },
-};
+  description:
+    "New to the fandom? Get a ref sheet, an icon and six stickers of your character from one named artist, in one consistent style.",
+  path: "/first-fursona-bundle",
+});
 
 const parts = [
   {
@@ -30,9 +34,17 @@ const parts = [
   },
 ];
 
+const structuredData = serviceJsonLd({
+  name: "First fursona bundle",
+  description:
+    "A coordinated fursona reference sheet, profile icon and six stickers drawn by one named human artist.",
+  path: "/first-fursona-bundle/",
+});
+
 export default function BundlePage() {
   return (
     <>
+      <JsonLd data={structuredData} />
       <section className="pagehead atmosphere">
         <div className="wrap">
           <Crumbs

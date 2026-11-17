@@ -19,6 +19,8 @@ type PlateProps = {
   /** hide the credit tag when the surrounding card already names the artist */
   credit?: boolean;
   priority?: boolean;
+  /** repeated artwork used only for decoration */
+  decorative?: boolean;
 };
 
 export function Plate({
@@ -27,6 +29,7 @@ export function Plate({
   tint,
   credit = true,
   priority = false,
+  decorative = false,
 }: PlateProps) {
   const item = art(key);
   const contain = item.fit === "contain" ? " plate-contain" : "";
@@ -35,7 +38,8 @@ export function Plate({
     <span className={`plate plate-${ratio} ${tint ?? item.tint}${contain}`}>
       <img
         src={artSrc(key)}
-        alt={item.alt}
+        alt={decorative ? "" : item.alt}
+        aria-hidden={decorative || undefined}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
         {...(priority ? { fetchPriority: "high" as const } : {})}

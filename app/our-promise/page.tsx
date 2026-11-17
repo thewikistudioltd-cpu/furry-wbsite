@@ -4,14 +4,15 @@ import Link from "next/link";
 import { Plate } from "@/components/Art";
 import { Crumbs, CtaPanel } from "@/components/blocks";
 import { Tbc } from "@/components/Tbc";
+import { pageMetadata } from "@/lib/metadata";
 import { contact, vars } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "SFW Only, No AI, Credited Artists",
   description:
     "Our rules in plain words: SFW art only, no AI at any stage, every piece signed and credited, and a public queue for every order.",
-  alternates: { canonical: "/our-promise" },
-};
+  path: "/our-promise",
+});
 
 export default function PromisePage() {
   return (

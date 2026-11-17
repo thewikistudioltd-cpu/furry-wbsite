@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:seo": "node scripts/verify-seo.mjs",
+    "check": "npm run lint && npm run build && npm run verify:seo"
   },
   "dependencies": {
     "next": "16.4.6",

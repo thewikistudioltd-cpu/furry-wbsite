@@ -39,9 +39,9 @@ export default function BrandbookPage() {
 
       <section className="section-sm">
         <div className="wrap">
-          <h2 className="h-section">Colour</h2>
+          <h2 className="h-section">Color</h2>
           <p className="lead measure">
-            Navy carries text and the primary button. The four brand colours are wayfinding
+            Navy carries text and the primary button. The four brand colors are wayfinding
             accents and artwork tints, never large competing blocks. The three ink tints exist
             because the bright versions do not reach 4.5:1 on white.
           </p>

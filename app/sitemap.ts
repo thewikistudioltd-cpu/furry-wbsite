@@ -28,6 +28,7 @@ const STATIC_ROUTES: { path: string; priority: number }[] = [
   { path: "our-promise", priority: 0.6 },
   { path: "faq", priority: 0.6 },
   { path: "about", priority: 0.5 },
+  { path: "species", priority: 0.6 },
   { path: "blog", priority: 0.6 },
 ];
 
@@ -48,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),
-    ...species.map((s) => ({
+    ...species.filter((s) => !s.noWorkYet).map((s) => ({
       url: `${base}/species/${s.slug}/`,
       lastModified,
       changeFrequency: "monthly" as const,

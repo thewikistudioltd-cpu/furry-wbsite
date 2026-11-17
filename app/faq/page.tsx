@@ -3,14 +3,15 @@ import Link from "next/link";
 
 import { Crumbs, CtaPanel, Faq } from "@/components/blocks";
 import { Tbc } from "@/components/Tbc";
+import { pageMetadata } from "@/lib/metadata";
 import { contact, vars } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Furry Commission FAQ: Prices, Timing, Payment",
   description:
     "How much a furry ref sheet costs, how long it takes, how to pay, revisions and usage rights. Straight answers before you order.",
-  alternates: { canonical: "/faq" },
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (
@@ -37,8 +38,13 @@ export default function FaqPage() {
           </h2>
           <Faq question="How much does a furry ref sheet cost?">
             <Tbc>
-              {`Ref sheets start at $${vars.price_sheet_simple} for flat color with front and back views. Shading, extra views and fursuit details add to the price. You get an exact quote before you pay anything.`}
+              {`Ref sheets start at $${vars.price_sheet_simple}; shading, extra views and fursuit details add to the quote.`}
             </Tbc>
+            <span>{" "}</span>
+            <Link href="/blog/furry-ref-sheet-cost-2026">
+              Read the full ref sheet pricing guide
+            </Link>
+            .
           </Faq>
           <Faq question="How much do icons and sticker packs cost?">
             <Tbc>
@@ -46,8 +52,9 @@ export default function FaqPage() {
             </Tbc>
           </Faq>
           <Faq question="How do I pay?">
-            By card through a secure checkout link. You do not need a PayPal account. Half is
-            due to start and half when you approve the sketch.
+            <Tbc>
+              {`By card through a secure checkout link. You do not need a PayPal account. ${vars.deposit_split} is due to start and the balance is due when you approve the sketch.`}
+            </Tbc>
           </Faq>
           <Faq question="Which currencies do you accept?">
             Prices are in US dollars. Your card provider converts from your own currency.

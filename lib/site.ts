@@ -43,7 +43,13 @@ export type Site = {
   artists: Artist[];
 };
 
-export const site = data as unknown as Site;
+const configuredSite = data as unknown as Site;
+const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+
+export const site: Site = {
+  ...configuredSite,
+  url: configuredUrl || configuredSite.url,
+};
 export const vars = site.vars;
 export const contact = site.contact;
 export const legal = site.legal;

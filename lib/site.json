@@ -2,11 +2,11 @@
   "_note": "Every value the launch checklist still has to confirm lives here, so you change it once and the whole site updates. Values wrapped in [square brackets] are still unconfirmed placeholders and render with a dotted underline on the site.",
   "name": "Refpaw",
   "tagline": "A collective of human artists drawing fursona art. SFW only. No AI.",
-  "url": "https://refpaw-seven.vercel.app",
+  "url": "https://refpaw.com",
   "locale": "en-US",
   "contact": {
-    "email": "[hello@refpaw.com]",
-    "telegram": "[@refpaw]",
+    "email": "hello@refpaw.com",
+    "telegram": "@refpaw",
     "bluesky": "[refpaw.bsky.social]",
     "furaffinity": "[refpaw]",
     "discord": "[discord.gg/refpaw]"
@@ -138,7 +138,7 @@
       },
       {
         "label": "Species guides",
-        "href": "/species/wolf"
+        "href": "/species"
       },
       {
         "label": "Start a commission",
@@ -150,11 +150,11 @@
     {
       "slug": "lunaflare",
       "name": "LunaFlare",
-      "style": "Bold lineart, clean colour",
+      "style": "Bold lineart, clean color",
       "draws": "Ref sheets, icons and full illustrations",
       "status": "Open",
       "status_tone": "mint",
-      "bio": "LunaFlare draws fursonas with heavy, confident lineart and flat, saturated colour, the kind of art that still reads clearly at thumbnail size. Ref sheets are the core of the work: every view, every marking and a palette your next artist can actually use.",
+      "bio": "LunaFlare draws fursonas with heavy, confident lineart and flat, saturated color, the kind of art that still reads clearly at thumbnail size. Ref sheets are the core of the work: every view, every marking and a palette your next artist can actually use.",
       "instagram": "https://www.instagram.com/lunaflare6/",
       "avatar": "icon-bust-coyote",
       "strip": [

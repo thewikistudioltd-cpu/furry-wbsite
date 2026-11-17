@@ -2,17 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { ArtFigure, Plate } from "@/components/Art";
-import { Crumbs, CtaPanel, Note, TrustRow } from "@/components/blocks";
+import { Crumbs, CtaPanel, TrustRow } from "@/components/blocks";
+import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { Tbc } from "@/components/Tbc";
+import { pageMetadata } from "@/lib/metadata";
 import { species } from "@/lib/species";
 import { vars } from "@/lib/site";
+import { serviceJsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Furry Ref Sheet Commissions by Real Artists",
-  description: `Commission a fursona reference sheet from a named artist. Front and back view, color palette, expressions. From $${vars.price_sheet_simple}. SFW only, no AI.`,
-  alternates: { canonical: "/furry-ref-sheet-commission" },
-};
+  description:
+    "Commission a fursona reference sheet from a named artist. Front and back view, color palette and expressions. SFW only, no AI.",
+  path: "/furry-ref-sheet-commission",
+});
 
 const tiers = [
   {
@@ -40,9 +44,17 @@ const tiers = [
   },
 ];
 
+const structuredData = serviceJsonLd({
+  name: "Furry ref sheet commission",
+  description:
+    "A custom character reference sheet drawn by a named human artist, with character views, a color palette and expression details.",
+  path: "/furry-ref-sheet-commission/",
+});
+
 export default function RefSheetPage() {
   return (
     <>
+      <JsonLd data={structuredData} />
       <section className="pagehead atmosphere">
         <div className="wrap">
           <Crumbs
@@ -134,14 +146,6 @@ export default function RefSheetPage() {
                 </Link>
               </article>
             ))}
-          </div>
-
-          <div style={{ marginTop: 28 }}>
-            <Note>
-              <strong>Prices are not final yet.</strong> Every figure with a dotted underline is
-              still waiting on a decision from the collective. Confirm them in{" "}
-              <code>lib/site.json</code> before launch.
-            </Note>
           </div>
         </div>
       </section>

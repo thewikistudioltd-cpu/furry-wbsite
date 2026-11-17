@@ -3,15 +3,19 @@ import Link from "next/link";
 
 import { ArtFigure, Plate } from "@/components/Art";
 import { Crumbs, CtaPanel, TrustRow } from "@/components/blocks";
+import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { Tbc } from "@/components/Tbc";
+import { pageMetadata } from "@/lib/metadata";
 import { vars } from "@/lib/site";
+import { serviceJsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Furry Icon and PFP Commissions",
-  description: `Get a hand-drawn furry icon for Telegram, Discord and Bluesky. Flat or shaded, square and round crops. From $${vars.price_icon_flat}. Drawn by a named artist.`,
-  alternates: { canonical: "/furry-icon-commission" },
-};
+  description:
+    "Get a hand-drawn furry icon for Telegram, Discord and Bluesky. Flat or shaded, with square and round crops. Drawn by a named artist.",
+  path: "/furry-icon-commission",
+});
 
 const tiers = [
   {
@@ -38,16 +42,24 @@ const tiers = [
     featured: false,
     cta: "Order a pair",
     items: [
-      "Two icons in one style",
+      "Two shaded icons in one style",
       "For you and a friend or partner",
       "Drawn by the same artist",
     ],
   },
 ];
 
+const structuredData = serviceJsonLd({
+  name: "Furry icon commission",
+  description:
+    "A hand-drawn fursona headshot for profiles and chat apps, created by a named human artist.",
+  path: "/furry-icon-commission/",
+});
+
 export default function IconPage() {
   return (
     <>
+      <JsonLd data={structuredData} />
       <section className="pagehead atmosphere">
         <div className="wrap">
           <Crumbs

@@ -43,8 +43,8 @@ export const species: Species[] = [
       heading: "Markings are the whole job",
       art: "scene-forest-wolves",
       body: [
-        "Two grey wolves can look identical until you decide where the lighter fur stops. Say which markings are symmetrical and which are not, because that one answer changes how every future artist draws your character.",
-        "Eye colour and ear shape do more work than people expect at thumbnail size. They are what makes your icon recognisable in a crowded chat.",
+        "Two gray wolves can look identical until you decide where the lighter fur stops. Say which markings are symmetrical and which are not, because that one answer changes how every future artist draws your character.",
+        "Eye color and ear shape do more work than people expect at thumbnail size. They are what makes your icon recognizable in a crowded chat.",
       ],
     },
     gallery: [
@@ -77,7 +77,7 @@ export const species: Species[] = [
       heading: "The tail carries the design",
       art: "art-samurai-fox",
       body: [
-        "A fox tail is the largest single block of colour on the character, so decide early whether it is one colour, banded, or tipped, and how far up the banding goes.",
+        "A fox tail is the largest single block of color on the character, so decide early whether it is one color, banded, or tipped, and how far up the banding goes.",
         "Socks matter for the same reason. Where the dark fur stops on each leg is one of the first things a fursuit maker will ask you about.",
       ],
     },
@@ -127,9 +127,9 @@ export const species: Species[] = [
     intro:
       "A protogen is part animal, part machine, and the visor does most of the talking. A good protogen ref sheet shows the visor expressions as clearly as the body, because that is how other artists will read your character.",
     tell: [
-      "Visor colour and the expressions you use most",
+      "Visor color and the expressions you use most",
       "The layout of fur and armour, and where they meet",
-      "The colour of the lights",
+      "The color of the lights",
       "Any extra parts, such as wings or tail attachments",
       "Whether any part is detachable",
     ],

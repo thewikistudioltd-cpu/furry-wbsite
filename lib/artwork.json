@@ -4,7 +4,7 @@
   "refsheet-coyote": {
     "file": "refsheet-coyote.webp",
     "title": "Coyote ref sheet",
-    "alt": "Reference sheet of a tan coyote character: four full-body views, a clothed version, head expressions and a colour palette",
+    "alt": "Reference sheet of a tan coyote character: four full-body views, a clothed version, head expressions and a color palette",
     "credit": "LunaFlare",
     "cat": "sheets",
     "fit": "contain",
@@ -12,8 +12,8 @@
   },
   "refsheet-grey-wolf": {
     "file": "refsheet-grey-wolf.webp",
-    "title": "Grey wolf ref sheet",
-    "alt": "Reference sheet of a grey wolf character: front and back view, chibi poses, tail and paw details and a colour palette",
+    "title": "Gray wolf ref sheet",
+    "alt": "Reference sheet of a gray wolf character: front and back view, chibi poses, tail and paw details and a color palette",
     "credit": "LunaFlare",
     "cat": "sheets",
     "fit": "contain",
@@ -22,7 +22,7 @@
   "refsheet-orca-canine": {
     "file": "refsheet-orca-canine.webp",
     "title": "Orca-marked canine ref sheet",
-    "alt": "Reference sheet of a black, white and blue canine character with orca markings, showing four views and a colour palette",
+    "alt": "Reference sheet of a black, white and blue canine character with orca markings, showing four views and a color palette",
     "credit": "LunaFlare",
     "cat": "sheets",
     "fit": "contain",
@@ -31,7 +31,7 @@
   "refsheet-saarema": {
     "file": "refsheet-saarema.webp",
     "title": "Saarema ref sheet",
-    "alt": "Reference sheet for a white and grey character named Saarema, with front and back views, hand details and a colour palette on a magenta background",
+    "alt": "Reference sheet for a white and gray character named Saarema, with front and back views, hand details and a color palette on a magenta background",
     "credit": "LunaFlare",
     "cat": "sheets",
     "fit": "contain",
@@ -40,7 +40,7 @@
   "refsheet-fox-winter": {
     "file": "refsheet-fox-winter.webp",
     "title": "Winter fox ref sheet",
-    "alt": "Reference sheet of a cream and orange fox character, showing a clothed view, a fur view, eye and paw details and a colour ramp",
+    "alt": "Reference sheet of a cream and orange fox character, showing a clothed view, a fur view, eye and paw details and a color ramp",
     "credit": "LunaFlare",
     "cat": "sheets",
     "fit": "contain",
@@ -49,7 +49,7 @@
   "refsheet-crimson-lizard": {
     "file": "refsheet-crimson-lizard.webp",
     "title": "Crimson lizard ref sheet",
-    "alt": "Reference sheet of a dark red scaled lizard character with three body views, three head expressions and a colour palette",
+    "alt": "Reference sheet of a dark red scaled lizard character with three body views, three head expressions and a color palette",
     "credit": "LunaFlare",
     "cat": "sheets",
     "fit": "contain",
@@ -114,7 +114,7 @@
   "icon-bust-coyote": {
     "file": "icon-bust-coyote.webp",
     "title": "Coyote bust",
-    "alt": "Bust portrait of a grey and brown coyote character with green eyes, smiling",
+    "alt": "Bust portrait of a gray and brown coyote character with green eyes, smiling",
     "credit": "LunaFlare",
     "cat": "icons",
     "fit": "cover",
@@ -133,7 +133,7 @@
   "art-samurai-fox": {
     "file": "art-samurai-fox.webp",
     "title": "Samurai fox",
-    "alt": "Full body illustration of a dark grey fox character in black and red samurai clothing holding a katana",
+    "alt": "Full body illustration of a dark gray fox character in black and red samurai clothing holding a katana",
     "credit": "LunaFlare",
     "cat": "illustration",
     "fit": "cover",
@@ -187,7 +187,7 @@
   "scene-forest-wolves": {
     "file": "scene-forest-wolves.webp",
     "title": "Two wolves",
-    "alt": "Illustration of two grey wolf characters waving, standing in a meadow in front of pine trees",
+    "alt": "Illustration of two gray wolf characters waving, standing in a meadow in front of pine trees",
     "credit": "LunaFlare",
     "cat": "illustration",
     "fit": "cover",
@@ -205,7 +205,7 @@
   "scene-forest-walk": {
     "file": "scene-forest-walk.webp",
     "title": "Forest walk",
-    "alt": "Illustration of a grey canine character walking through a sunlit forest clearing with butterflies and daisies",
+    "alt": "Illustration of a gray canine character walking through a sunlit forest clearing with butterflies and daisies",
     "credit": "LunaFlare",
     "cat": "illustration",
     "fit": "cover",

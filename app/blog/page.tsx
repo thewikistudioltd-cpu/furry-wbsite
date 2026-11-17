@@ -5,13 +5,14 @@ import { Plate } from "@/components/Art";
 import { Crumbs, CtaPanel } from "@/components/blocks";
 import { Reveal } from "@/components/Reveal";
 import { posts } from "@/lib/blog";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "The Refpaw Blog: Guides for Commissioning Furry Art",
+export const metadata: Metadata = pageMetadata({
+  title: "Furry Commission Guides and Tips",
   description:
     "Plain guides on ref sheets, prices, sticker packs and commissioning furry art safely.",
-  alternates: { canonical: "/blog" },
-};
+  path: "/blog",
+});
 
 export default function BlogIndexPage() {
   return (

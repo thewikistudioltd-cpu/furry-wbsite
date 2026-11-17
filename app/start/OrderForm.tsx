@@ -102,7 +102,7 @@ export function OrderForm() {
           name="character"
           type="text"
           required
-          placeholder="Milo, grey wolf"
+          placeholder="Milo, gray wolf"
         />
       </div>
 

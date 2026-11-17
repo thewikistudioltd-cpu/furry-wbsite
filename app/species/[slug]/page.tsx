@@ -6,6 +6,7 @@ import { ArtFigure, Plate } from "@/components/Art";
 import { Crumbs, CtaPanel } from "@/components/blocks";
 import { Reveal } from "@/components/Reveal";
 import { Tbc } from "@/components/Tbc";
+import { artSrc } from "@/lib/artwork";
 import { species, speciesBySlug } from "@/lib/species";
 import { vars } from "@/lib/site";
 
@@ -22,9 +23,17 @@ export async function generateMetadata({
   const s = speciesBySlug(slug);
   if (!s) return {};
   return {
-    title: `${s.name} Ref Sheet and Art Commissions`,
+    title: `${s.name} Fursona Ref Sheet and Art Commissions`,
     description: `Commission ${s.name.toLowerCase()} fursona art from an artist who knows the species. Ref sheets, icons and sticker packs. SFW only, no AI.`,
     alternates: { canonical: `/species/${s.slug}` },
+    robots: s.noWorkYet ? { index: false, follow: true } : undefined,
+    openGraph: {
+      type: "website",
+      title: `${s.name} Fursona Ref Sheet and Art Commissions`,
+      description: s.intro,
+      url: `/species/${s.slug}`,
+      images: [artSrc(s.sheet)],
+    },
   };
 }
 
@@ -34,7 +43,7 @@ const tiers = [
     price: vars.price_sheet_simple,
     href: "/furry-ref-sheet-commission",
     cta: "See ref sheets",
-    items: ["Front and back view", "Colour palette with hex codes", "Expressions and callouts"],
+    items: ["Front and back view", "Color palette with hex codes", "Expressions and callouts"],
   },
   {
     title: "Icon",

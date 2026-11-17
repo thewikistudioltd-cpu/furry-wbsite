@@ -4,7 +4,10 @@ import { notFound } from "next/navigation";
 
 import { Plate } from "@/components/Art";
 import { Crumbs } from "@/components/blocks";
+import { JsonLd } from "@/components/JsonLd";
+import { artSrc } from "@/lib/artwork";
 import { postBySlug, posts } from "@/lib/blog";
+import { articleJsonLd } from "@/lib/structured-data";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -22,6 +25,19 @@ export async function generateMetadata({
     title: post.title,
     description: post.summary,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.summary,
+      url: `/blog/${post.slug}`,
+      images: [artSrc(post.art)],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.summary,
+      images: [artSrc(post.art)],
+    },
   };
 }
 
@@ -33,9 +49,16 @@ export default async function BlogPostPage({
   const { slug } = await params;
   const post = postBySlug(slug);
   if (!post) notFound();
+  const structuredData = articleJsonLd({
+    headline: post.title,
+    description: post.summary,
+    path: `/blog/${post.slug}/`,
+    image: artSrc(post.art),
+  });
 
   return (
     <>
+      <JsonLd data={structuredData} />
       <section className="pagehead atmosphere">
         <div className="wrap" style={{ maxWidth: 860 }}>
           <Crumbs
@@ -72,7 +95,7 @@ export default async function BlogPostPage({
             <h2 className="h-card">Next step</h2>
             <p style={{ color: "var(--ink-soft)", fontSize: 15, marginTop: 8 }}>
               Everything on Refpaw is drawn by a named human artist, SFW only, with a sketch
-              for you to approve before colour.
+              for you to approve before color.
             </p>
             <div className="btn-row" style={{ marginTop: 18 }}>
               <Link className="btn btn-primary btn-sm" href={post.next.href}>

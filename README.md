@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Refpaw website
 
-## Getting Started
+The production Refpaw marketing and commission site. It uses Next.js App Router and exports a fully static site into `out/`.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run check
+```
 
-## Learn More
+This runs ESLint, the production static export, and SEO regression checks against the generated `out/` files.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`npm run build` writes the deployable site to `out/`. The host must serve unknown routes with `out/404.html` and a real HTTP 404 status.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The canonical base URL defaults to `lib/site.json`. A build can deliberately override it:
 
-## Deploy on Vercel
+```bash
+NEXT_PUBLIC_SITE_URL=https://preview.example.com npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Do not index a preview deployment. The production build should use `https://refpaw.com`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content sources
+
+- `lib/site.json` — prices, timings, contact details, legal details, navigation and artist roster
+- `lib/artwork.json` — artwork files, alt text and artist credit
+- `lib/blog.ts` — blog posts
+- `lib/species.ts` — species pages
+
+Values still wrapped in square brackets are unconfirmed business decisions. Confirm them before launch rather than guessing.

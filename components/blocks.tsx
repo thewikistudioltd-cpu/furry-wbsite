@@ -1,7 +1,9 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
+import { site } from "@/lib/site";
 
 /** The three things we never stop saying. */
 export function TrustRow() {
@@ -59,15 +61,30 @@ export function CtaPanel() {
 }
 
 export function Crumbs({ trail }: { trail: { label: string; href?: string }[] }) {
+  const base = site.url.replace(/\/$/, "");
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      ...(item.href ? { item: `${base}${item.href === "/" ? "/" : `${item.href}/`}` } : {}),
+    })),
+  };
+
   return (
-    <nav className="crumbs" aria-label="Breadcrumb">
-      {trail.map((item, i) => (
-        <span key={item.label} style={{ display: "contents" }}>
-          {item.href ? <Link href={item.href}>{item.label}</Link> : <span>{item.label}</span>}
-          {i < trail.length - 1 && <span>/</span>}
-        </span>
-      ))}
-    </nav>
+    <>
+      <JsonLd data={breadcrumbJsonLd} />
+      <nav className="crumbs" aria-label="Breadcrumb">
+        {trail.map((item, i) => (
+          <span key={item.label} style={{ display: "contents" }}>
+            {item.href ? <Link href={item.href}>{item.label}</Link> : <span>{item.label}</span>}
+            {i < trail.length - 1 && <span>/</span>}
+          </span>
+        ))}
+      </nav>
+    </>
   );
 }
 

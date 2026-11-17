@@ -4,10 +4,12 @@ import { notFound } from "next/navigation";
 
 import { ArtFigure, Plate } from "@/components/Art";
 import { Crumbs } from "@/components/blocks";
+import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { Tbc } from "@/components/Tbc";
-import { art } from "@/lib/artwork";
+import { art, artSrc } from "@/lib/artwork";
 import { artistBySlug, site, vars } from "@/lib/site";
+import { profilePageJsonLd } from "@/lib/structured-data";
 
 export function generateStaticParams() {
   return site.artists.map((a) => ({ slug: a.slug }));
@@ -25,6 +27,13 @@ export async function generateMetadata({
     title: `${artist.name}, Furry Artist`,
     description: `${artist.name} draws fursona ref sheets, icons and illustrations. ${artist.style}. See recent work and commission them through Refpaw.`,
     alternates: { canonical: `/artists/${artist.slug}` },
+    openGraph: {
+      type: "profile",
+      title: `${artist.name}, Furry Artist`,
+      description: `${artist.name} draws fursona ref sheets, icons and illustrations through Refpaw.`,
+      url: `/artists/${artist.slug}`,
+      images: [artSrc(artist.avatar)],
+    },
   };
 }
 
@@ -36,6 +45,13 @@ export default async function ArtistPage({
   const { slug } = await params;
   const artist = artistBySlug(slug);
   if (!artist) notFound();
+  const structuredData = profilePageJsonLd({
+    name: artist.name,
+    description: artist.bio,
+    path: `/artists/${artist.slug}/`,
+    image: artSrc(artist.avatar),
+    sameAs: artist.instagram ? [artist.instagram] : [],
+  });
 
   /** A wide ref sheet takes two columns; everything else takes one. */
   const gallery = artist.gallery.map((key) => ({
@@ -45,6 +61,7 @@ export default async function ArtistPage({
 
   return (
     <>
+      <JsonLd data={structuredData} />
       <section className="pagehead atmosphere">
         <div className="wrap">
           <Crumbs

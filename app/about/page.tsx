@@ -4,14 +4,15 @@ import Link from "next/link";
 import { Plate } from "@/components/Art";
 import { Crumbs, CtaPanel } from "@/components/blocks";
 import { Tbc } from "@/components/Tbc";
+import { pageMetadata } from "@/lib/metadata";
 import { contact, vars } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "About Refpaw | A Collective of Human Artists",
+export const metadata: Metadata = pageMetadata({
+  title: "About Us: A Collective of Human Artists",
   description:
     "Refpaw is a collective of artists who draw fursona art by hand. Find out who we are, how we work and how artists are paid.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -35,19 +36,14 @@ export default function AboutPage() {
           <div className="split">
             <div className="prose">
               <p>
-                <Tbc>
-                  {"[Two or three sentences of the real founding story: who started it and why. Replace this paragraph before launch.]"}
-                </Tbc>
+                Refpaw is being built as a straightforward home for SFW character
+                commissions: real portfolios, named artists, written quotes and a sketch
+                approval stage before final color.
               </p>
               <p>
-                <Tbc>
-                  {`Today ${vars.artist_count} number of artists draw under the Refpaw name. Each one sets their own style and signs their own work. Refpaw handles the website, payments and scheduling so they can spend their time drawing.`}
-                </Tbc>
-              </p>
-              <p>
-                <Tbc>
-                  {"[Our artists are based in Pakistan and work with clients around the world. Confirm or remove this line.]"}
-                </Tbc>
+                Each artist keeps their own style and signs their own work. Refpaw handles
+                the website, scheduling and customer communication so artists can spend more
+                of their time drawing.
               </p>
             </div>
             <div className="split-art">

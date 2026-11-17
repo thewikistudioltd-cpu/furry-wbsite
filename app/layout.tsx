@@ -3,6 +3,7 @@ import { DM_Sans, Fredoka } from "next/font/google";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 
 import "./globals.css";
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Refpaw",
+    locale: site.locale.replace("-", "_"),
     images: ["/branding/social-cover-1200x630.png"],
   },
   twitter: { card: "summary_large_image" },
@@ -49,12 +51,25 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport = { themeColor: "#ffffff" };
+export const viewport = { themeColor: "#F7FAFE" };
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  url: site.url,
+  logo: `${site.url.replace(/\/$/, "")}/branding/refpaw-icon.svg`,
+  email: site.contact.email,
+  sameAs: site.contact.telegram.startsWith("@")
+    ? [`https://t.me/${site.contact.telegram.slice(1)}`]
+    : [],
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${fredoka.variable} ${dmSans.variable}`}>
       <body>
+        <JsonLd data={organizationJsonLd} />
         <a className="skip-link" href="#main">
           Skip to content
         </a>
